@@ -1,0 +1,37 @@
+@keyframes menu {
+	0% {
+		left: 0;
+		box-shadow: -10px 0 3px 0 var(--white);
+	}
+	50% {
+		left: 30%;
+		box-shadow: 10px 0 3px 0 var(--white);
+	}
+	100% {
+		left: 0;
+	}
+}
+
+@keyframes btnHover {
+	0% {
+		box-shadow: 0 0 4px -1px var(--btn-shadow);
+	}
+	15% {
+		box-shadow: 0 0 4px 0 var(--btn-shadow);
+	}
+	17% {
+		box-shadow: 0 0 8px 2px var(--btn-shadow);
+	}
+	19% {
+		box-shadow: 0 0 4px 0 var(--btn-shadow);
+	}
+	21% {
+		box-shadow: 0 0 8px 2px var(--btn-shadow);
+	}
+	85% {
+		box-shadow: 0 0 10px 6px var(--btn-shadow);
+	}
+	100% {
+		box-shadow: 0 0 4px 3px var(--btn-shadow);
+	}
+}

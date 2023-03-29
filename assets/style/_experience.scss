@@ -1,0 +1,57 @@
+.l-experience {
+	padding: 9.5rem 0 5rem;
+	&__body {
+		gap: 2rem;
+		padding-bottom: 8rem;
+		border-bottom: 1px solid var(--experience-border-color);
+		//margin-bottom: 100px;
+	}
+	&__quote {
+		max-width: 550px;
+		width: 100%;
+	}
+	&__text {
+		font-weight: 300;
+		font-style: italic;
+		font-size: 1.1rem;
+		margin-bottom: 1.5rem;
+	}
+	&__person {
+		gap: 2rem;
+		align-items: center;
+	}
+	&__photo {
+		border-radius: 50%;
+		overflow: hidden;
+		width: 70px;
+		height: 70px;
+		flex-shrink: 0;
+		img {
+			object-fit: contain;
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__name {
+		font-weight: 500;
+		margin-bottom: .5rem;
+	}
+	&__position {
+		font-size: .85rem;
+		color: var(--btn-bg);
+	}
+	&__stats {
+		max-width: 500px;
+		width: 100%;
+	}
+	&__item + &__item {
+		margin-top: 2rem;
+	}
+	&__icon {
+		margin-right: 2rem;
+	}
+	&__item-text {
+		font-size: 1.6rem;
+		font-weight: 500;
+	}
+}

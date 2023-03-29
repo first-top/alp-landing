@@ -1,0 +1,27 @@
+@import "vars";
+@import "default";
+@import "header";
+@import "intro";
+@import "experience";
+@import "form";
+@import "history";
+@import "footer";
+
+
+.content {
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100% auto;
+	&::before {
+		content: "";
+		background: linear-gradient(to top, var(--gr-light), var(--gr-dark));
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+	}
+	
+}
+
+@import "frames";
+@import "media";
