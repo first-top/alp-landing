@@ -1081,7 +1081,6 @@ a.no-link {
 .l-intro__item {
   padding: 10rem 1rem 2.5rem;
   border-radius: 0.8rem;
-  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -1104,10 +1103,8 @@ a.no-link {
   margin-bottom: 2rem;
 }
 .l-intro__h {
-  display: none;
-  inset: 0;
-  background-color: red;
-  z-index: 1;
+  inset: -3px;
+  z-index: -1;
 }
 .l-intro__h svg {
   width: 100%;
@@ -1118,7 +1115,10 @@ a.no-link {
   height: 100%;
   fill: transparent;
   stroke-width: 7px;
-  stroke: black;
+  stroke: var(--btn-shadow);
+}
+.l-intro__h svg rect:not(.hovered) {
+  stroke: none;
 }
 
 .l-experience {
