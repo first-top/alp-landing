@@ -278,6 +278,14 @@ body {
 		box-shadow: 0 0 4px 3px var(--btn-shadow);
 	}
 }
+.txt-hover {
+	transition: text-shadow .3s linear, color .3s linear;
+	cursor: pointer;
+	&:hover{
+		text-shadow: var(--btn-shadow) 0 2px 10px;
+		color:  var(--btn-shadow);
+	}
+}
 
 /*
 .section-title {
