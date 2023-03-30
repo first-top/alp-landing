@@ -85,11 +85,17 @@ const setGradient = {
   introNode: null,
   headerNode: null,
   pointValue: null,
+  setGradientBind: null,
   setValues() {
 
   },
   setGradient() {
-    this.pointValue = this.contentNode.clientHeight - (this.headerNode.clientHeight + this.introNode.clientHeight)
+    if (!this.contentNode || !this.contentBGNode) return false
+    if (window.innerWidth < 920) {
+      this.pointValue = this.contentNode.clientHeight - (this.headerNode.clientHeight * 2)
+    } else {
+      this.pointValue = this.contentNode.clientHeight - (this.headerNode.clientHeight + this.introNode.clientHeight)
+    }
     this.pointValue = this.pointValue * 100 / this.contentNode.clientHeight
     this.contentNode.style.background =
       `linear-gradient(to top, ${this.from} 0%, ${this.point} ${this.pointValue}%, ${this.point} ${this.pointValue}%, ${this.to} 100% )`
@@ -101,7 +107,9 @@ const setGradient = {
     this.contentBGNode = document.querySelector(".content__bg")
     this.headerNode = document.querySelector("header")
     this.introNode = document.querySelector(".l-intro")
-    this.setGradient()
+    this.setGradientBind = this.setGradient.bind(this)
+    this.setGradientBind()
+    window.addEventListener("resize", this.setGradientBind)
   }
 }
 

@@ -195,11 +195,11 @@ body {
 
 .content {
 	flex: 1 0 auto;
-	position: relative;
+	//position: relative;
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: 100% auto;
-	z-index: -1;
+	z-index: 3;
 	//filter: blur(4px);
 	&::before {
 		//content: "";
@@ -212,7 +212,7 @@ body {
 		position: absolute;
 		inset: 0;
 		z-index: -1;
-		filter: blur(4px);
+		//filter: blur(4px);
 	}
 	&__video {
 		position: absolute;
@@ -222,7 +222,7 @@ body {
 		
 		overflow: hidden;
 		video {
-			opacity: .05;
+			opacity: .3;
 			//max-width: 1920px;
 			width: 100%;
 			height: auto;
