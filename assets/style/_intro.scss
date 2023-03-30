@@ -52,27 +52,7 @@
 		//margin: 0 auto;
 	}
 	
-	&__h {
-		inset: -3px;
-		z-index: -1;
-		
-		svg {
-			width: 100%;
-			height: 100%;
-			
-			rect {
-				width: 100%;
-				height: 100%;
-				fill: transparent;
-				stroke-width: 7px;
-				stroke: var(--btn-shadow);
-				
-				&:not(.hovered) {
-					stroke: none;
-				}
-			}
-		}
-	}
+
 	
 	&__back {
 		inset: 0;

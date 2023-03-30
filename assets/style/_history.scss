@@ -1,39 +1,47 @@
 .l-history {
 	padding: 11rem 0 6rem;
+	
 	&__items {
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 2rem;
 	}
+	
 	&__item {
 		padding: 2rem 2rem 3rem;
 		border-radius: 12px;
-		overflow: hidden;
+		//overflow: hidden;
 		position: relative;
+		
 		&::before {
 			position: absolute;
 			content: '';
 			inset: 0;
 			z-index: -1;
-		background-color: var(--bg-dark);
+			background-color: var(--bg-dark);
 			transition: opacity .2s linear;
+			border-radius: 12px;
 		}
+		
 		&:hover {
 			&::before {
-				opacity: .1;
+				opacity: .8;
 			}
 		}
 	}
+	
 	&__picture {
 		max-width: 10.5rem;
 		width: 100%;
 		margin: 0 auto 2rem;
 		flex: 0 0 5.5rem;
 	}
+	
 	&__content {
 		//flex-grow: 1;
 		height: 100%;
 		gap: 1.5rem;
 	}
+	
 	&__text {
 		text-align: center;
 		font-size: .9rem;
