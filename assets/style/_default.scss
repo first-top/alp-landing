@@ -195,7 +195,19 @@ body {
 
 .content {
 	flex: 1 0 auto;
-	
+	&__video {
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		opacity: .2;
+		video {
+			max-width: 1920px;
+			width: 100%;
+			height: auto;
+			margin: 0 auto;
+			display: block;
+		}
+	}
 }
 
 .footer {

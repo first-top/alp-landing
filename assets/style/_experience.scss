@@ -49,9 +49,24 @@
 	}
 	&__icon {
 		margin-right: 2rem;
+		transform-origin: center;
+		transition: transform .1s linear;
+		&:hover {
+			transform: scale(1.1);
+			cursor: pointer;
+			.svg-shadow {
+				opacity: 1;
+			}
+		}
 	}
 	&__item-text {
 		font-size: 1.6rem;
 		font-weight: 500;
 	}
+}
+
+.svg-shadow {
+	opacity: 0;
+	
+	transition: opacity .3s linear;
 }
