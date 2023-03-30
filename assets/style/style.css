@@ -209,12 +209,23 @@ body {
 
 .content {
   flex: 1 0 auto;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+.content::before {
+  content: "";
+  background: linear-gradient(to top, var(--gr-light), var(--gr-dark));
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
 .content__video {
   position: absolute;
   z-index: -1;
   width: 100%;
-  opacity: 0.2;
+  opacity: 0.05;
   overflow: hidden;
 }
 .content__video video {
@@ -222,6 +233,11 @@ body {
   height: auto;
   margin: 0 auto;
   display: block;
+}
+.content__video-filter {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--gr-light), transparent);
 }
 
 .footer {
@@ -1376,20 +1392,6 @@ a.no-link {
 .footer__copy {
   padding: 0.5rem 0 1.5rem;
   font-size: 0.8rem;
-}
-
-.content {
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: 100% auto;
-}
-.content::before {
-  content: "";
-  background: linear-gradient(to top, var(--gr-light), var(--gr-dark));
-  position: absolute;
-  inset: 0;
-  z-index: -1;
 }
 
 @keyframes menu {

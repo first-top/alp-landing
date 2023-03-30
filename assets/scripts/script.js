@@ -78,5 +78,5 @@ const videoHandler = {
 
 window.addEventListener("DOMContentLoaded", () => {
   svgStroke.init()
-  videoHandler.init()
+  // videoHandler.init()
 })
