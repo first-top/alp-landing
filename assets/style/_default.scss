@@ -199,25 +199,36 @@ body {
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: 100% auto;
+	z-index: -1;
+	//filter: blur(4px);
 	&::before {
-		content: "";
+		//content: "";
 		background: linear-gradient(to top, var(--gr-light), var(--gr-dark));
 		position: absolute;
 		inset: 0;
 		z-index: -1;
 	}
+	&__bg {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		filter: blur(4px);
+	}
 	&__video {
 		position: absolute;
 		z-index: -1;
 		width: 100%;
-		opacity: .05;
+		height: 100%;
+		
 		overflow: hidden;
 		video {
+			opacity: .05;
 			//max-width: 1920px;
 			width: 100%;
 			height: auto;
 			margin: 0 auto;
 			display: block;
+			z-index: -1;
 		}
 	}
 	&__video-filter {

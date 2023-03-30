@@ -76,7 +76,37 @@ const videoHandler = {
   }
 }
 
+const setGradient = {
+  from: "#0363cf",
+  point: "#023271",
+  to: "#021740",
+  contentNode: null,
+  contentBGNode: null,
+  introNode: null,
+  headerNode: null,
+  pointValue: null,
+  setValues() {
+
+  },
+  setGradient() {
+    this.pointValue = this.contentNode.clientHeight - (this.headerNode.clientHeight + this.introNode.clientHeight)
+    this.pointValue = this.pointValue * 100 / this.contentNode.clientHeight
+    this.contentNode.style.background =
+      `linear-gradient(to top, ${this.from} 0%, ${this.point} ${this.pointValue}%, ${this.point} ${this.pointValue}%, ${this.to} 100% )`
+    this.contentBGNode.style.background =
+      `linear-gradient(to top, ${this.from} 0%, ${this.point} ${this.pointValue}%, ${this.point} ${this.pointValue}%, transparent 100% )`
+  },
+  init() {
+    this.contentNode = document.querySelector(".content")
+    this.contentBGNode = document.querySelector(".content__bg")
+    this.headerNode = document.querySelector("header")
+    this.introNode = document.querySelector(".l-intro")
+    this.setGradient()
+  }
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   svgStroke.init()
+  setGradient.init()
   // videoHandler.init()
 })

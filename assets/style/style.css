@@ -213,26 +213,34 @@ body {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
+  z-index: -1;
 }
 .content::before {
-  content: "";
   background: linear-gradient(to top, var(--gr-light), var(--gr-dark));
   position: absolute;
   inset: 0;
   z-index: -1;
 }
+.content__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  filter: blur(4px);
+}
 .content__video {
   position: absolute;
   z-index: -1;
   width: 100%;
-  opacity: 0.05;
+  height: 100%;
   overflow: hidden;
 }
 .content__video video {
+  opacity: 0.05;
   width: 100%;
   height: auto;
   margin: 0 auto;
   display: block;
+  z-index: -1;
 }
 .content__video-filter {
   position: absolute;
