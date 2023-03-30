@@ -35,3 +35,33 @@
 		box-shadow: 0 0 4px 3px var(--btn-shadow);
 	}
 }
+
+@keyframes modal {
+	0% {
+		transform: translateY(-100%);
+	}
+	65% {
+		transform: translateY(0%);
+	}
+	85% {
+		transform: translateY(-10%);
+	}
+	95% {
+		transform: translateY(0%);
+	}
+	95% {
+		transform: translateY(-5%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+@keyframes modalBody {
+	0% {
+		transform: translateY(-300%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+

@@ -113,8 +113,74 @@ const setGradient = {
   }
 }
 
+const modal = {
+  modalOpen: document.querySelector(".header__request"),
+  bodyNode: document.querySelector("body"),
+  modal: document.querySelector(".modal"),
+  showModal() {
+    const _this = this
+    
+    this.modal.classList.add("opening")
+    setTimeout(() => {
+      _this.modal.classList.remove("opening")
+    }, 1500)
+    setTimeout(() => {
+      _this.modal.classList.add("opened")
+    }, 1000)
+    // this.bodyNode.classList.add("no-scroll")
+    this.modal.addEventListener("click", this.closeModalBind)
+    window.addEventListener("keyup", this.closeModalBind)
+  },
+  closeModal({key, keyCode, code, target, type}) {
+    const _this = this
+    if (type === "keyup") {
+      if (key === "Escape" || code === "Escape" || keyCode === 27) {
+        _this.modal.classList.add("closing")
+        setTimeout(() => {
+          _this.modal.classList.remove("closing")
+        }, 1500)
+        setTimeout(() => {
+          _this.modal.classList.remove('opened')
+        }, 1000)
+        this.bodyNode.classList.remove("no-scroll")
+        this.modal.removeEventListener("click", this.closeModalBind)
+        window.removeEventListener("keyup", this.closeModalBind)
+      }
+    }
+    if (type === "click") {
+      if(target.closest(".modal__close") || !target.closest(".modal__body")) {
+        _this.modal.classList.add("closing")
+        setTimeout(() => {
+          _this.modal.classList.remove("closing")
+        }, 1500)
+        setTimeout(() => {
+          _this.modal.classList.remove('opened')
+        }, 1000)
+        // this.modal.classList.remove('opened')
+        this.bodyNode.classList.remove("no-scroll")
+        this.modal.removeEventListener("click", this.closeModalBind)
+        window.removeEventListener("keyup", this.closeModalBind)
+      }
+    }
+  },
+  addListeners() {
+    this.modalOpen.addEventListener("click", this.showModalBind)
+  },
+  init() {
+    if (this.modalOpen) {
+      // this.form = this.modal.querySelector("form")
+      this.closeModalBind = this.closeModal.bind(this)
+      this.showModalBind = this.showModal.bind(this)
+      // this.form.addEventListener("submit", formUtils.sendData.bind(formUtils, "feedback-form"))
+      this.addListeners()
+    }
+  }
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   svgStroke.init()
   setGradient.init()
+  let mask = new PhoneMask({})
+  modal.init()
   // videoHandler.init()
 })
