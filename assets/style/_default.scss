@@ -328,7 +328,23 @@ body {
 	}
 }
 
+.stroke-item {
+	//display: none;
+	transition: transform .3s ease-in, box-shadow .3s ease-in;
+	&:hover{
+		transform: translate(-.4rem, -.4rem);
+		box-shadow: .4rem .4rem 1rem 0 var(--bg-dark);
+	}
+	&.l-history__item {
+		&:hover {
+			box-shadow: .4rem .4rem 1rem 0 var(--btn-shadow);
+		}
+	}
+}
+
 .stroke-item-hover {
+	display: none;
+	//display: none;
 	inset: -3px;
 	z-index: -1;
 	

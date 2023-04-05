@@ -335,7 +335,19 @@ body {
   color: var(--btn-shadow);
 }
 
+.stroke-item {
+  transition: transform 0.3s ease-in, box-shadow 0.3s ease-in;
+}
+.stroke-item:hover {
+  transform: translate(-0.4rem, -0.4rem);
+  box-shadow: 0.4rem 0.4rem 1rem 0 var(--bg-dark);
+}
+.stroke-item.l-history__item:hover {
+  box-shadow: 0.4rem 0.4rem 1rem 0 var(--btn-shadow);
+}
+
 .stroke-item-hover {
+  display: none;
   inset: -3px;
   z-index: -1;
 }
