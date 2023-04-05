@@ -340,7 +340,7 @@ body {
 }
 .stroke-item:hover {
   transform: translate(-0.4rem, -0.4rem);
-  box-shadow: 0.4rem 0.4rem 1rem 0 var(--bg-dark);
+  box-shadow: 0.4rem 0.4rem 1rem 0 var(--btn-shadow);
 }
 .stroke-item.l-history__item:hover {
   box-shadow: 0.4rem 0.4rem 1rem 0 var(--btn-shadow);
