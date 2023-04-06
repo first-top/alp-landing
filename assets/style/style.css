@@ -8,7 +8,7 @@
   --item-border: #006cb4;
   --form-placeholder-color: #999db0;
   --experience-border-color: rgba(39, 95, 163, .5);
-  --footer-border: rgba(25, 45, 80, .2);
+  --footer-border: rgba(153, 157, 176, .2);
   --bg-dark: #01173e;
   --modal-bg: rgba(2,50,113, 75%);
   --font: "Rubik", sans-serif;
@@ -1352,7 +1352,7 @@ a.no-link {
   gap: 2rem;
 }
 .footer__top {
-  border-bottom: 1px solid var(--footer-border);
+  border-bottom: 2px solid var(--footer-border);
 }
 .footer__logo {
   gap: 1.5rem;
@@ -1409,7 +1409,7 @@ a.no-link {
   font-weight: 500;
 }
 .footer__copy {
-  padding: 0.5rem 0 1.5rem;
+  padding: 0.9rem 0 1.5rem;
   font-size: 0.8rem;
 }
 
