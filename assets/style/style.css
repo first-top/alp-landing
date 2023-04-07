@@ -1354,6 +1354,9 @@ a.no-link {
 .footer__top {
   padding-bottom: 0;
 }
+.footer__bottom {
+  padding-bottom: 1.4rem;
+}
 .footer__logo {
   gap: 1.5rem;
   flex: 0 0 350px;
