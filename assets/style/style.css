@@ -1352,7 +1352,7 @@ a.no-link {
   gap: 2rem;
 }
 .footer__top {
-  border-bottom: 2px solid var(--footer-border);
+  padding-bottom: 0;
 }
 .footer__logo {
   gap: 1.5rem;
