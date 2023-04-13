@@ -198,20 +198,22 @@ window.addEventListener("DOMContentLoaded", () => {
   const digital = new LandingModal("digital")
   // modal.init("request")
   // modal.init("automation")
-  const projects = new Swiper('.l-projects__slider', {
-    loop: true,
-    slidesPerView: 1,
-    spaceBetween: 68,
-    speed: 1000,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    effect: 'coverflow',
-    coverflowEffect: {
-      rotate: 90,
-      slideShadows: false,
-    },
-  })
+  if (document.querySelector('.l-projects__slider')) {
+    const projects = new Swiper('.l-projects__slider', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 68,
+      speed: 1000,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      effect: 'coverflow',
+      coverflowEffect: {
+        rotate: 90,
+        slideShadows: false,
+      },
+    })
+  }
   // videoHandler.init()
 })
