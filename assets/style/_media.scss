@@ -8,6 +8,22 @@
 		}
 		
 	}
+	.l-projects {
+		&__body {
+			flex-direction: column;
+		}
+		&__static {
+			display: flex;
+			justify-content: space-between;
+			flex-basis: auto;
+		}
+		&__actions {
+			margin-top: 0;
+		}
+		&__slider {
+			width: 100%;
+		}
+	}
 	.footer {
 		&__mail {
 			margin-right: 0;
@@ -66,6 +82,11 @@
 			margin: 0 auto;
 		}
 	}
+	.l-projects {
+		&__body {
+			padding: 15px 20px;
+		}
+	}
 	.footer {
 		&__top {
 			gap: 1rem
@@ -87,6 +108,26 @@
 			flex-shrink: 1;
 		}
 	}
+	.modal-card {
+		.modal {
+			&__body {
+				max-width: 90%;
+				padding-top: 2rem;
+				padding-left: 2rem;
+				padding-right: 2rem;
+			}
+			&__bg {
+				&::before {
+					content: "";
+					display: block;
+					position: absolute;
+					inset: 0;
+					background: linear-gradient(45deg, var(--gr-light), var(--gr-dark));
+					opacity: .9;
+				}
+			}
+		}
+	}
 }
 @media (max-width: 550px) {
 	.l-experience {
@@ -97,12 +138,24 @@
 			font-size: 1.2rem;
 		}
 	}
+	.l-projects-item {
+		&__logo {
+			max-width: 100px;
+		}
+	}
 	.modal {
 		&__body {
 			padding: 1.5rem 3rem;
 		}
 		&__input {
 			max-width: none;
+		}
+	}
+	.modal-card {
+		.modal {
+			&__body {
+				padding: 3rem 1rem 1rem;
+			}
 		}
 	}
 }
@@ -134,6 +187,23 @@
 				padding-top: 1rem;
 				padding-bottom: 1rem;
 			}
+		}
+	}
+	.l-projects {
+		&__title {
+			font-size: 24px;
+		}
+		&__prev, &__next {
+			width: 40px;
+			height: 40px;
+		}
+	}
+	.l-projects-item {
+		&__name {
+			font-size: 22px;
+		}
+		&__logo {
+			display: none;
 		}
 	}
 	.footer {

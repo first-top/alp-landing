@@ -25,7 +25,7 @@ const svgStroke = {
     const length = 2 * Math.PI * r + 2 * (w - 2 * r) + 2 * (h - 2 * r)
     rect.style.height = `${h}px`
     rect.style.width = `${w}px`
-    
+
     rect.style.strokeDasharray = `${this.strokeLength} ${length}`
     this.interval = setInterval(() => {
       _this.strokeLength += 20
@@ -60,7 +60,7 @@ const videoHandler = {
     console.log(introRect.top - wrapperRect.top)
     if (window.innerWidth < 921) {
       videoHeight = introRect.top - wrapperRect.top
-    }  else {
+    } else {
       videoHeight = introRect.bottom - wrapperRect.top
     }
     this.videoWrapper.style.height = `${videoHeight}px`
@@ -112,14 +112,15 @@ const setGradient = {
     window.addEventListener("resize", this.setGradientBind)
   }
 }
-
+/*
 const modal = {
-  modalOpen: document.querySelector(".header__request"),
+  modalOpen: null,
   bodyNode: document.querySelector("body"),
-  modal: document.querySelector(".modal"),
-  showModal() {
+  modal: null,
+  showModal(e) {
+    e.preventDefault()
     const _this = this
-    
+
     this.modal.classList.add("opening")
     setTimeout(() => {
       _this.modal.classList.remove("opening")
@@ -148,7 +149,7 @@ const modal = {
       }
     }
     if (type === "click") {
-      if(target.closest(".modal__close") || !target.closest(".modal__body")) {
+      if (target.closest(".modal__close") || !target.closest(".modal__body")) {
         _this.modal.classList.add("closing")
         setTimeout(() => {
           _this.modal.classList.remove("closing")
@@ -166,8 +167,18 @@ const modal = {
   addListeners() {
     this.modalOpen.addEventListener("click", this.showModalBind)
   },
-  init() {
-    if (this.modalOpen) {
+  init(type) {
+    switch (type) {
+      case "request":
+        this.modalOpen = document.querySelector(".header__request")
+        this.modal = document.querySelector(".modal.modal-request")
+        break
+      case "automation":
+        this.modalOpen = document.querySelector(".automation-open")
+        this.modal = document.querySelector(".modal.modal-automation")
+        break
+    }
+    if (this.modalOpen && this.modal) {
       // this.form = this.modal.querySelector("form")
       this.closeModalBind = this.closeModal.bind(this)
       this.showModalBind = this.showModal.bind(this)
@@ -176,11 +187,31 @@ const modal = {
     }
   }
 }
-
+*/
 window.addEventListener("DOMContentLoaded", () => {
   svgStroke.init()
   setGradient.init()
   let mask = new PhoneMask({})
-  modal.init()
+  const request = new LandingModal("request")
+  const automation = new LandingModal("automation")
+  const outsourcing = new LandingModal("outsourcing")
+  const digital = new LandingModal("digital")
+  // modal.init("request")
+  // modal.init("automation")
+  const projects = new Swiper('.l-projects__slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 68,
+    speed: 1000,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 90,
+      slideShadows: false,
+    },
+  })
   // videoHandler.init()
 })
