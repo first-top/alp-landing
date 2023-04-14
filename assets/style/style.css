@@ -1956,6 +1956,7 @@ a.no-link {
   }
   .modal__title {
     font-size: 1.4rem;
+    padding-right: 50px;
   }
   .modal__picture {
     display: none;

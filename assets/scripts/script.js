@@ -189,7 +189,7 @@ const modal = {
 }
 */
 window.addEventListener("DOMContentLoaded", () => {
-  svgStroke.init()
+  // svgStroke.init()
   setGradient.init()
   let mask = new PhoneMask({})
   const request = new LandingModal("request")
