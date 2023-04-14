@@ -29,6 +29,16 @@
 			margin-right: 0;
 		}
 	}
+	.modal-card {
+		.modal {
+			&__picture {
+				max-height: 200px;
+				img {
+					object-position: top;
+				}
+			}
+		}
+	}
 }
 @media (max-width: 768px) {
 	.container {
@@ -112,10 +122,13 @@
 		.modal {
 			&__body {
 				max-width: 90%;
-				padding-top: 2rem;
-				padding-left: 2rem;
-				padding-right: 2rem;
+				//padding-top: 2rem;
+				//padding-left: 2rem;
+				//padding-right: 2rem;
 			}
+		&__content {
+			padding: 2rem;
+		}
 			&__bg {
 				&::before {
 					content: "";
@@ -154,7 +167,10 @@
 	.modal-card {
 		.modal {
 			&__body {
-				padding: 3rem 1rem 1rem;
+				//padding: 3rem 1rem 1rem;
+			}
+			&__content {
+				padding: 1rem;
 			}
 		}
 	}
@@ -236,6 +252,9 @@
 		}
 		&__title {
 			font-size: 1.4rem;
+		}
+		&__picture {
+			display: none;
 		}
 	}
 }

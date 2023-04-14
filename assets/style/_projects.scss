@@ -5,6 +5,7 @@
     background: linear-gradient(to right, var(--item-gr-light), var(--item-gr-dark));
     border-radius: 12px;
     overflow: hidden;
+    border: 1px solid var(--item-border);
   }
 
   &__static {

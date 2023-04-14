@@ -1158,22 +1158,27 @@ a.no-link {
   grid-gap: 2rem;
 }
 .l-intro__item {
-  padding: 10rem 1rem 2.5rem;
+  padding: 0 0 2.5rem;
   border-radius: 0.8rem;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top;
+  background: linear-gradient(to right, #035dbc, #011142);
   border: 1px solid var(--item-border);
   text-align: center;
   max-width: 340px;
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 .l-intro__item:hover .l-intro__back img {
   transform: scale(1.1);
 }
 .l-intro__item-content {
   height: 100%;
+}
+.l-intro__info {
+  flex-grow: 1;
+}
+.l-intro__name, .l-intro__description {
+  padding: 0 1rem;
 }
 .l-intro__name {
   padding-bottom: 1rem;
@@ -1371,6 +1376,7 @@ a.no-link {
   background: linear-gradient(to right, var(--item-gr-light), var(--item-gr-dark));
   border-radius: 12px;
   overflow: hidden;
+  border: 1px solid var(--item-border);
 }
 .l-projects__static {
   flex-basis: 300px;
@@ -1640,14 +1646,23 @@ a.no-link {
 }
 
 .modal-card .modal__body {
+  background: linear-gradient(to right, var(--item-gr-light), var(--item-gr-dark));
   color: white;
-  padding-top: 355px;
-  background-repeat: no-repeat;
   background-size: 105%;
   max-width: 770px;
-  background-position: -10px -10px;
-  background-color: transparent;
   overflow: auto;
+  padding: 0;
+}
+.modal-card .modal__content {
+  padding: 0 6rem 2.5rem;
+}
+.modal-card .modal__picture {
+  max-height: 360px;
+}
+.modal-card .modal__picture img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
 }
 .modal-card .modal__bg {
   z-index: -1;
@@ -1773,6 +1788,12 @@ a.no-link {
   .footer__mail {
     margin-right: 0;
   }
+  .modal-card .modal__picture {
+    max-height: 200px;
+  }
+  .modal-card .modal__picture img {
+    object-position: top;
+  }
 }
 @media (max-width: 768px) {
   .container {
@@ -1846,9 +1867,9 @@ a.no-link {
   }
   .modal-card .modal__body {
     max-width: 90%;
-    padding-top: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  }
+  .modal-card .modal__content {
+    padding: 2rem;
   }
   .modal-card .modal__bg::before {
     content: "";
@@ -1875,8 +1896,8 @@ a.no-link {
   .modal__input {
     max-width: none;
   }
-  .modal-card .modal__body {
-    padding: 3rem 1rem 1rem;
+  .modal-card .modal__content {
+    padding: 1rem;
   }
 }
 @media (max-width: 480px) {
@@ -1935,6 +1956,9 @@ a.no-link {
   }
   .modal__title {
     font-size: 1.4rem;
+  }
+  .modal__picture {
+    display: none;
   }
 }
 
