@@ -62,6 +62,9 @@
     height: 100px;
     margin: 0 auto;
     grid-area: logo;
+    &_en {
+      margin: 0;
+    }
 
     &:hover {
 

@@ -1125,6 +1125,9 @@ a.no-link {
   margin: 0 auto;
   grid-area: logo;
 }
+.header__logo_en {
+  margin: 0;
+}
 .header__logo:hover img {
   transform: scale(1.05);
 }
