@@ -1648,6 +1648,12 @@ a.no-link {
   max-width: 525px;
 }
 
+.modal-card {
+  overflow: scroll;
+  align-items: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .modal-card .modal__body {
   background: linear-gradient(to right, var(--item-gr-light), var(--item-gr-dark));
   color: white;

@@ -131,6 +131,10 @@
 }
 
 .modal-card {
+  overflow: scroll;
+  align-items: flex-start;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   .modal {
     &__body {
       background: linear-gradient(to right, var(--item-gr-light), var(--item-gr-dark));

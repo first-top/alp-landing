@@ -3,6 +3,7 @@ class LandingModal {
   bodyNode = document.querySelector("body")
   modal = null
 
+
   constructor(type) {
     switch (type) {
       case "request":
