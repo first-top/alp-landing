@@ -197,6 +197,85 @@
   }
 }
 
+
+
+@media (max-height: 910px) {
+  .modal-card {
+    padding: 1rem;
+    .modal {
+      &__body {
+        max-width: 500px;
+      }
+
+      &__picture {
+        max-height: 250px;
+      }
+
+
+      &__content {
+        padding: 1rem 2rem 1.5rem;
+
+        ul {
+          li + li {
+            margin-top: 5px;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+@media (max-height: 730px) {
+  .modal-card {
+    .modal {
+      &__title {
+        font-size: 1.3rem;
+      }
+
+      &__picture {
+        max-height: 200px;
+      }
+
+      &__content {
+
+        ul {
+          li {
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-height: 590px) {
+  .modal-card {
+    .modal {
+      &__body {
+        max-width: 400px;
+      }
+      &__title {
+        font-size: 1.3rem;
+      }
+
+      &__picture {
+        max-height: 100px;
+        display: none;
+      }
+
+      &__content {
+        padding: 1rem 2rem;
+        ul {
+          li {
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 480px) {
   .header {
     &__logo {
@@ -281,91 +360,19 @@
   .modal {
     &__body {
       padding: 1.5rem;
+      overflow: hidden;
     }
 
     &__title {
       font-size: 1.4rem;
-      padding-right: 50px;
-    }
-
-    &__picture {
-      display: none;
+      //padding-right: 50px;
     }
   }
-}
-
-@media (max-height: 910px) {
-  .modal-card {
-    padding: 1rem;
-    .modal {
-      &__body {
-        max-width: 500px;
-      }
-
-      &__picture {
-        max-height: 250px;
-      }
-
-
-      &__content {
-        padding: 1rem 2rem 1.5rem;
-
-        ul {
-          li + li {
-            margin-top: 5px;
-          }
-        }
-      }
-
-    }
-  }
-}
-
-@media (max-height: 730px) {
   .modal-card {
     .modal {
-      &__title {
-        font-size: 1.3rem;
-      }
-
       &__picture {
-        max-height: 200px;
-      }
-
-      &__content {
-
-        ul {
-          li {
-            font-size: .8rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-height: 590px) {
-  .modal-card {
-    .modal {
-      &__body {
-        max-width: 400px;
-      }
-      &__title {
-        font-size: 1.3rem;
-      }
-
-      &__picture {
-        max-height: 100px;
-        display: none;
-      }
-
-      &__content {
-        padding: 1rem 2rem;
-        ul {
-          li {
-            font-size: .8rem;
-          }
-        }
+        max-height: 150px;
+        //display: none;
       }
     }
   }
