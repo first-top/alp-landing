@@ -191,7 +191,12 @@ const modal = {
 window.addEventListener("DOMContentLoaded", () => {
   // svgStroke.init()
   setGradient.init()
-  let mask = new PhoneMask({})
+  const useMask = !!document.querySelector(".en-ver")
+  console.log(useMask)
+  if (!useMask) {
+    console.log("test")
+    let mask = new PhoneMask({})
+  }
   const request = new LandingModal("request")
   const automation = new LandingModal("automation")
   const outsourcing = new LandingModal("outsourcing")
