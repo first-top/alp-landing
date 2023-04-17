@@ -132,11 +132,12 @@
 
 .modal-card {
   //overflow: auto;
-  align-items: flex-start;
+  //align-items: flex-start;
   padding-top: 1rem;
   padding-bottom: 1rem;
   .modal {
     &__body {
+      overflow: hidden;
       background: linear-gradient(to right, var(--item-gr-light), var(--item-gr-dark));
       color: white;
       //padding-top: 355px;

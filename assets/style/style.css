@@ -1649,11 +1649,11 @@ a.no-link {
 }
 
 .modal-card {
-  align-items: flex-start;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 .modal-card .modal__body {
+  overflow: hidden;
   background: linear-gradient(to right, var(--item-gr-light), var(--item-gr-dark));
   color: white;
   background-size: 105%;
@@ -2018,6 +2018,7 @@ a.no-link {
 @media (max-height: 410px) {
   .modal-card {
     overflow: auto;
+    align-items: flex-start;
   }
 }
 
