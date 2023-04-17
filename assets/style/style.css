@@ -12,7 +12,7 @@
   --experience-border-color: rgba(39, 95, 163, .5);
   --footer-border: rgba(153, 157, 176, .2);
   --bg-dark: #01173e;
-  --modal-bg: rgba(2,50,113, 75%);
+  --modal-bg: rgba(2,50,113, 100%);
   --font: "Rubik", sans-serif;
   font-size: 16px;
 }
