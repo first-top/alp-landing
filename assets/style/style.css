@@ -1649,7 +1649,6 @@ a.no-link {
 }
 
 .modal-card {
-  overflow: auto;
   align-items: flex-start;
   padding-top: 1rem;
   padding-bottom: 1rem;
