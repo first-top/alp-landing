@@ -1659,7 +1659,6 @@ a.no-link {
   color: white;
   background-size: 105%;
   max-width: 770px;
-  overflow: auto;
   padding: 0;
 }
 .modal-card .modal__content {
@@ -1969,6 +1968,52 @@ a.no-link {
   }
   .modal__picture {
     display: none;
+  }
+}
+@media (max-height: 910px) {
+  .modal-card {
+    padding: 1rem;
+  }
+  .modal-card .modal__body {
+    max-width: 500px;
+  }
+  .modal-card .modal__picture {
+    max-height: 250px;
+  }
+  .modal-card .modal__content {
+    padding: 1rem 2rem 1.5rem;
+  }
+  .modal-card .modal__content ul li + li {
+    margin-top: 5px;
+  }
+}
+@media (max-height: 730px) {
+  .modal-card .modal__title {
+    font-size: 1.3rem;
+  }
+  .modal-card .modal__picture {
+    max-height: 200px;
+  }
+  .modal-card .modal__content ul li {
+    font-size: 0.8rem;
+  }
+}
+@media (max-height: 590px) {
+  .modal-card .modal__body {
+    max-width: 400px;
+  }
+  .modal-card .modal__title {
+    font-size: 1.3rem;
+  }
+  .modal-card .modal__picture {
+    max-height: 100px;
+    display: none;
+  }
+  .modal-card .modal__content {
+    padding: 1rem 2rem;
+  }
+  .modal-card .modal__content ul li {
+    font-size: 0.8rem;
   }
 }
 
