@@ -2015,5 +2015,10 @@ a.no-link {
     font-size: 0.8rem;
   }
 }
+@media (max-height: 410px) {
+  .modal-card {
+    overflow: auto;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

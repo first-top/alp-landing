@@ -370,3 +370,9 @@
     }
   }
 }
+
+@media (max-height: 410px) {
+  .modal-card {
+    overflow: auto;
+  }
+}
