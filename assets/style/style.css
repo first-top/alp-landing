@@ -1988,6 +1988,7 @@ a.no-link {
   }
   .footer__top {
     flex-direction: column;
+    align-items: flex-start;
   }
   .footer__logo {
     flex-basis: auto;
@@ -1996,7 +1997,7 @@ a.no-link {
     margin-bottom: 1.5rem;
   }
   .footer__contacts {
-    align-items: center;
+    align-items: flex-start;
   }
   .footer__bottom {
     flex-direction: column;

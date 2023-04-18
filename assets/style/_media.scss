@@ -195,6 +195,11 @@
       }
     }
   }
+  .footer {
+    //&__contacts {
+    //  align-items: flex-start;
+    //}
+  }
 }
 
 
@@ -331,7 +336,7 @@
   .footer {
     &__top {
       flex-direction: column;
-
+      align-items: flex-start;
     }
 
     &__logo {
@@ -346,7 +351,8 @@
     }
 
     &__contacts {
-      align-items: center;
+      align-items: flex-start;
+      //align-items: center;
     }
 
     &__bottom {
